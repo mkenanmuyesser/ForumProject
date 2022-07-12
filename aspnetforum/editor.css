@@ -1,0 +1,9 @@
+﻿.editorBBCODE {font: 9pt "Courier New";}
+
+div.richeditor {margin-top:7px;margin-bottom:7px;}
+div.richeditor div.editbar {margin-top:5px;padding:4px;background-image:url('images/editbar_bg.gif');border-left:1px solid #ddd;border-right:1px solid #ddd;border-top:1px solid #ddd;border-bottom:none;}
+div.richeditor div button{vertical-align:middle;width:23px;height:23px;border:1px solid #ddd;background-color:Transparent;cursor:pointer;color:Black;background-position:center;background-repeat:no-repeat;background-image:none;padding:0}
+div.richeditor div button:hover{border:1px solid #aaa;}
+div.richeditor div.container {border-top:none;border-bottom:1px solid #ddd;border-left:1px solid #ddd;border-right:1px solid #ddd;}
+div.richeditor textarea{padding:5px;border:none;}
+div.richeditor iframe{background-color:#ffffff;border:none;}

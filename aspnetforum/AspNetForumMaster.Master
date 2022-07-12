@@ -1,0 +1,150 @@
+<%@ Master Language="C#" AutoEventWireup="true" Codebehind="AspNetForumMaster.master.cs" Inherits="aspnetforum.AspNetForumMaster" %>
+<%@ Import Namespace="aspnetforum.Utils" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+	<title></title>
+	<link href="aspnetforum.css" rel="Stylesheet" type="text/css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript"></script>
+	<script src="jquery.jgrowl_minimized.js" type="text/javascript"></script>
+	<link href="jquery.jgrowl.css" rel="stylesheet" type="text/css" />
+	<link rel="alternate" type="application/rss+xml" title="recent posts" href="recent.aspx?rss=1" />
+	<meta name="viewport" content="width=device-width"> <%-- for mobile --%>
+	<asp:contentplaceholder id="ContentPlaceHolderHEAD" runat="server">
+	</asp:contentplaceholder>
+</head>
+<body>
+	<form id="form1" runat="server">
+		<div class="topheader" enableviewstate="false" runat="server" id="divHeader">
+			<div class="innercontainer">
+			<ul>
+				<% if(!string.IsNullOrEmpty(Settings.TitleLink)) { %>
+				<li class="backtowebsite mobilehidden"><a href="<%= aspnetforum.Utils.Settings.TitleLink %>"><%= aspnetforum.Resources.various.BackToWebSite %></a></li> <% } %>
+				<li><a href="recenttopics.aspx"> <%= aspnetforum.Resources.various.RecentTopics %></a></li>
+				<li><a href="recent.aspx"><%= aspnetforum.Resources.various.RecentPosts %></a></li>
+				<li><a href="search.aspx"><%= aspnetforum.Resources.various.Search %></a></li>
+				<li id="usersLink" runat="server" enableviewstate="false" class="mobilehidden"><a href="users.aspx"><%= aspnetforum.Resources.various.Users %></a></li>
+				<li id="adminLink" runat="server" enableviewstate="false" class="mobilehidden"><a href="admin.aspx"><%= aspnetforum.Resources.various.Administrator %></a></li>
+				<% if(aspnetforum.Utils.User.IsCurrentUserModerator()) { %>
+					<li class="mobilehidden"><a href="unapprovedposts.aspx" >Moderator <%= ModeratorCount > 0 ? "(" + ModeratorCount + ")" : "" %> </a></li>
+				<% } %>
+				<li><a href="faq.aspx">faq</a></li>
+				<li class="mobilehidden"><a href="recent.aspx?rss=1" runat="server" id="rssLink" enableviewstate="false"><img alt="recent posts from all forums - RSS" src="images/rss.png" /></a></li>
+			</ul>
+			</div>
+		</div>
+
+		<div class="header">
+			<div class="innercontainer">
+			<h1><a href="default.aspx"><%= aspnetforum.Utils.Settings.ForumTitle %></a></h1>
+				<div id="curuserTable" runat="server" class="logininfo" enableviewstate="false">
+					<div class="curUserInfo">
+						<span style="text-align:left">
+						<img runat="server" id="imgAvatar" class="avatar" enableviewstate="false" src="images/guestavatar.gif" onerror="this.src='images/guestavatar.gif'" alt="guest avatar" style="float: left; margin-right: 5px;width:32px;height:32px;border-radius:32px" />
+						<a href="" id="viewProfileLink" class="curUsername" runat="server" title="edit my profile" enableviewstate="false"></a>
+						<br />
+							<span class="mobilehidden"><a href="editprofile.aspx"><%= aspnetforum.Resources.various.MyProfile %></a> |</span>
+						<a href="logout.aspx" id="logoutLink" runat="server" enableviewstate="false"><%= aspnetforum.Resources.various.SignOut %></a>
+						</span>
+					</div>
+
+					<div class="unreadInfo mobilehidden">
+						<a href="updatedtopics.aspx">
+							<img src="images/unreadtopics.png" alt="topics" />							
+							<span runat="server" id="spanNumUnreadThreads" enableviewstate="false"></span>
+							<%= aspnetforum.Resources.various.UnreadTopics %>
+						</a>
+						<a href="privateinbox.aspx">
+							<img src="images/unreadmessages.png" alt="inbox" />
+							<span runat="server" id="spanNumMsgs" enableviewstate="false"></span>
+							<span><%= aspnetforum.Resources.various.Messages %></span>
+						</a>
+					</div>
+
+				</div>
+			<!-- ############## -->
+			<!-- comment (or remove) the following section if you use single sign-on programmatically (and you don't need login-password inputs etc)-->
+			<div id="loginTable" runat="server" class="logininfo" enableviewstate="false">
+				<div style="margin-top: 20px;" class="mobilehidden">
+				<a href="register.aspx" class="registerLink"><%= aspnetforum.Resources.various.Register %></a><br/>
+				<a href="lostpassword.aspx" class="lostpswLink"><%= aspnetforum.Resources.various.LostPassword %></a>
+				</div>
+				<div>
+				<input type="text" id="LoginName" name="LoginName" class="headerinput" placeholder="Kullanýcý Adý" onkeypress="return EnterKeyToButton('loginbutton');" />
+				<input type="password" id="Password" class="headerinput" placeholder="Þifre" name="Password" onkeypress="return EnterKeyToButton('loginbutton');" />
+				<asp:Label ID="lblLoginErr" runat="server" Visible="false" EnableViewState="false" ForeColor="#ffa2a2"><%= aspnetforum.Resources.various.LoginError %></asp:Label>
+				<input name="rememberme" style="display: none" onkeypress="return EnterKeyToButton('loginbutton');" id="rememberme" type="checkbox" value="1" checked="checked" style="padding-left: 0px; margin-left: 0px" /><label style="display: none" for="rememberme"><%= aspnetforum.Resources.various.RememberMe %></label>
+				<input name="loginbutton" id="loginbutton" type="submit" class="headerinput" value="Giriþ" />
+
+				
+				<span class="sociallogin">
+					<a href="OpenIdLogin.aspx" id="aOpenId" runat="server" enableviewstate="false" title="Login with OpenID">
+					<img src="images/openid/openid-icon.png" alt="open id" /></a><a href="twitterlogin.aspx" id="aTwitter" runat="server" enableviewstate="false" title="Sign in with twitter" rel="nofollow">
+					<img src="images/twitter.png" alt="sign in with Twitter" /></a><a href="javascript:void(0)" id="aFacebook" runat="server" enableviewstate="false" title="Login with Facebook" onclick="FbLogin()">
+					<img src="images/facebook.png" alt="sign in with facebook" /></a>&nbsp;</span>
+					</div>
+			</div>
+			<!-- ################## -->
+		</div></div>
+
+		<% if(aspnetforum.Utils.User.CurrentUserID!=0 && Page is aspnetforum.AdminForumPage) { %>
+		<!-- admin menu -->
+		<div class="topheader" style="margin-bottom:10px"><div class="innercontainer"><ul>
+			<li style="float:left;margin:0;"><b><a href="admin.aspx" ><asp:Label ID="lblAdministrator" runat="server" EnableViewState="False" meta:resourcekey="lblAdministratorResource1">Forum Yönetimi</asp:Label></a></b></li>
+            <li><a href="editsubforums.aspx"><asp:Label ID="lblSubforums" runat="server" EnableViewState="False" meta:resourcekey="lblSubforumsResource1">Alt Forum Yönetimi</asp:Label></a></li>
+			<li><a href="adminsettings.aspx"> <asp:Label ID="lblSettings" runat="server" EnableViewState="False" meta:resourcekey="lblSettingsResource1">Ayarlar</asp:Label></a></li>			
+			<li><a href="adminusergroups.aspx"><asp:Label ID="lblUserGroups" runat="server" EnableViewState="False" meta:resourcekey="lblUserGroupsResource1">Kullanýcý ve Grup Yönetimi</asp:Label></a></li>
+			<li><a href="allusers.aspx"><asp:Label ID="lblUsers" runat="server" EnableViewState="false" meta:resourcekey="lblUsersResource1">Bütün Kullanýcýlar</asp:Label></a></li>
+			<li><a href="adduser.aspx"><asp:Label ID="lblAddUser" runat="server" EnableViewState="False" meta:resourcekey="lblAddUserResource1">Kullanýcý Ekle</asp:Label></a></li>
+			<li><a href="emailallusers.aspx"><asp:Label ID="lblEmailAll" runat="server" EnableViewState="False" meta:resourcekey="lblEmailAllResource1">Toplu E-posta veya Mesaj</asp:Label></a></li>
+			<li><a href="purgeoldtopics.aspx"><asp:Label ID="lblPurge" runat="server" EnableViewState="False" meta:resourcekey="lblPurgeResource1">Eski Baþlýklarý Temizle</asp:Label></a></li>
+			</ul>
+		</div>
+		</div>
+		<% } %>
+
+		<div class="forumcontent innercontainer">
+		<asp:ContentPlaceHolder ID="AspNetForumContentPlaceHolder" runat="server">
+		</asp:ContentPlaceHolder>
+		<br style="clear:both" /><br /><br />
+		<hr />
+		<div class="gray" style="text-align:center">
+		Powered by <a href="http://www.jitbit.com/asp-net-forum/" rel="nofollow" title="Jitbit ASP.NET Forum">Jitbit Forum</a> <asp:Label ID="lblVersion" runat="server" EnableViewState="false"></asp:Label>
+		&copy; 2006-2013 Jitbit Software
+		</div>
+		</div>
+	</form>
+
+	<script type="text/javascript">
+		function EnterKeyToButton(buttonId) {
+			if (event.which || event.keyCode) { if ((event.which == 13) || (event.keyCode == 13)) { document.getElementById(buttonId).click(); return false; } } else { return true };
+		}
+	</script>
+
+	<div id="fb-root"></div>
+	<script type="text/javascript">
+		window.fbAsyncInit = function () {
+			FB.init({ appId: '<%= aspnetforum.Utils.Settings.FacebookAppID %>', status: true, cookie: true, xfbml: true, oauth: true });
+		};
+		(function () {
+			var e = document.createElement('script'); e.async = true;
+			e.src = document.location.protocol +
+			'//connect.facebook.net/en_US/all.js';
+			document.getElementById('fb-root').appendChild(e);
+		} ());
+	</script>
+
+	<script type="text/javascript">
+		function FbLogin() {
+			FB.login(function (response) {
+				if (response.authResponse) {
+						// user is logged in and granted some permissions.
+					document.location.href = 'facebooklogin.aspx?token=' + response.authResponse.accessToken + "&uid=" + response.authResponse.userID;
+				} else {
+					// user is not logged in
+				}
+			}, { scope: 'email' });
+		}
+	</script>
+</body>
+</html>

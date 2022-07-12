@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aspnetforum", "aspnetforum\aspnetforum.csproj", "{4C6835F3-7E60-4E96-BC01-32150E619BBE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C6835F3-7E60-4E96-BC01-32150E619BBE}.Debug|Any CPU.ActiveCfg = FullDebug|Any CPU
+		{4C6835F3-7E60-4E96-BC01-32150E619BBE}.Debug|Any CPU.Build.0 = FullDebug|Any CPU
+		{4C6835F3-7E60-4E96-BC01-32150E619BBE}.Release|Any CPU.ActiveCfg = Full|Any CPU
+		{4C6835F3-7E60-4E96-BC01-32150E619BBE}.Release|Any CPU.Build.0 = Full|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://kenanmuyesser.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = aspnetforum\\aspnetforum.csproj
+		SccProjectName1 = aspnetforum
+		SccLocalPath1 = aspnetforum
+	EndGlobalSection
+EndGlobal

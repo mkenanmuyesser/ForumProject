@@ -1,0 +1,16 @@
+﻿/*open id selector*/
+div.openid ul { text-align:center; list-style-type:none; display:inline;}
+div.openid ul li {float:left; padding:4px}
+div.openid ul li span {padding:0 1em 0 3px}
+div.openid fieldset {clear:both; padding:1em 0;border:none;}
+div.openid div+fieldset {display:none}
+div.openid label {display:block; font-weight:bold; margin-bottom:.5em}
+input[name=openid_username] {width:8em}
+input[name=openid_identifier] {width:18em}
+div.openid ul li.highlight {background-color: #FD6}
+div.openid fieldset div {background: #DCDCDC url(images/openid/fadegrey.png); padding:10px;display:inline-block}
+div.openid input[type='submit'] {margin-left:1em;}
+.openid_logo{color:#F7931E;padding:6px 0px 8px 28px; background: url(images/openid/openidico.png) no-repeat}
+#openid_login{float:left; width:30%; margin:2em 1em; text-align:center}
+#openid_login div{margin-top:0.5em}
+#openid_login div+span{font-size:smaller}

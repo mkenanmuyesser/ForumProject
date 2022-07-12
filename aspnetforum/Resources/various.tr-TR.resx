@@ -1,0 +1,441 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RememberMe" xml:space="preserve">
+    <value>Beni hatırla</value>
+  </data>
+  <data name="LostPassword" xml:space="preserve">
+    <value>Şifremi unuttum</value>
+  </data>
+  <data name="StopWatchingForum" xml:space="preserve">
+    <value>Bu forumu takip etmeyi durdur</value>
+  </data>
+  <data name="ProfileSaved" xml:space="preserve">
+    <value>Profil kaydedildi</value>
+  </data>
+  <data name="Wrote" xml:space="preserve">
+    <value>yazdı</value>
+  </data>
+  <data name="ErrorBigPictureDimensions" xml:space="preserve">
+    <value>Resim boyutları çok büyük</value>
+  </data>
+  <data name="ErrorIntegratedUserName" xml:space="preserve">
+    <value>Kullanıcılar, Tümleşik kimlik doğrulaması AÇIK onların adlarını değiştirmek için izin verilmez</value>
+  </data>
+  <data name="Psw" xml:space="preserve">
+    <value>Şifre:</value>
+  </data>
+  <data name="WhatsGoingOn" xml:space="preserve">
+    <value>Neler oluyor</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>ekle</value>
+  </data>
+  <data name="NewPrivateMsgs" xml:space="preserve">
+    <value>Yeni özel mesaj</value>
+  </data>
+  <data name="LoggedInAs" xml:space="preserve">
+    <value>Oturum açan</value>
+  </data>
+  <data name="MyProfile" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+  <data name="Guests" xml:space="preserve">
+    <value>Konuklar</value>
+  </data>
+  <data name="Smilies" xml:space="preserve">
+    <value>Suratlar</value>
+  </data>
+  <data name="LastLogonDate" xml:space="preserve">
+    <value>Son oturum açma tarih</value>
+  </data>
+  <data name="ActivationEmailBody" xml:space="preserve">
+    <value>Lütfen aşağıdaki linki tıklayarak forum kaydetme işlemini doğrulayın.</value>
+  </data>
+  <data name="EnabledUsers" xml:space="preserve">
+    <value>Engelli kullanıcıların</value>
+  </data>
+  <data name="ErrorWrongOldPassword" xml:space="preserve">
+    <value>Eski şifre yanlış.</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Ara</value>
+  </data>
+  <data name="ActivationError" xml:space="preserve">
+    <value>Aktivasyon Hatası! - yanlış şifre ya da kullanıcı adı</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>sil</value>
+  </data>
+  <data name="PasswordChanged" xml:space="preserve">
+    <value>Şifre değiştirildi</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Anasayfa</value>
+  </data>
+  <data name="AddMessage" xml:space="preserve">
+    <value>Mesaj ekle</value>
+  </data>
+  <data name="LoginError" xml:space="preserve">
+    <value>yanlış kullanıcı adı veya şifre</value>
+  </data>
+  <data name="AnotherFile" xml:space="preserve">
+    <value>Diger dosyalar...</value>
+  </data>
+  <data name="Posts" xml:space="preserve">
+    <value>Mesaj</value>
+  </data>
+  <data name="NoForums" xml:space="preserve">
+    <value>Henüz açılmış bir forum yok. Lütfen yönetici ile temasa geçiniz</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>-den</value>
+  </data>
+  <data name="ThreadUpdatedEmailBody" xml:space="preserve">
+    <value>Hangi güncelleştirilmiş bir tartışma iplik, abone bulunmaktadır.</value>
+  </data>
+  <data name="LostPasswordEmailBody" xml:space="preserve">
+    <value>Size veya bir başkasına {0} forumu şifre kurtarma istedi. Kullanıcı Adı: {1} Yeni şifrenizi: {2} {3}</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Kayıt ol</value>
+  </data>
+  <data name="AddNewForum" xml:space="preserve">
+    <value>Yeni bir forum ekle:</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Eposta:</value>
+  </data>
+  <data name="NewThreadEmailBody" xml:space="preserve">
+    <value>Size bir forum, yeni bir konu için yaratılmış abone bulunmaktadır.</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Kullanıcılar</value>
+  </data>
+  <data name="CreateAPoll" xml:space="preserve">
+    <value>bir anket oluştururum</value>
+  </data>
+  <data name="Forums" xml:space="preserve">
+    <value>Forumlar</value>
+  </data>
+  <data name="ErrorNotPictureFile" xml:space="preserve">
+    <value>Değil bir resim dosyası</value>
+  </data>
+  <data name="ManuallyAddingUserDescription" xml:space="preserve">
+    <value>Bu sayfayı elle kayıt sürecinden geçmesi için bir kullanıcı gerek kalmadan yeni bir kullanıcı eklemek için</value>
+  </data>
+  <data name="UserSuccessfullyCreated" xml:space="preserve">
+    <value>Kullanıcı başarıyla oluşturuldu!</value>
+  </data>
+  <data name="ThreadUpdatedEmailSubject" xml:space="preserve">
+    <value>Forum bildirimi. Thread güncellendi.</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Kullanıcı:</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Kullanıcı adı:</value>
+  </data>
+  <data name="Administrator" xml:space="preserve">
+    <value>Yönetici</value>
+  </data>
+  <data name="NoForumsFound" xml:space="preserve">
+    <value>Forum bulunamadı</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Şifre:</value>
+  </data>
+  <data name="ErrorUserExists" xml:space="preserve">
+    <value>Kullanıcı &lt;b&gt;{0}&lt;/b&gt; zaten var.</value>
+  </data>
+  <data name="RecentPosts" xml:space="preserve">
+    <value>Yeni mesajlar</value>
+  </data>
+  <data name="ErrorPasswordsDoNotMatch" xml:space="preserve">
+    <value>Yeni şifreler uyuşmuyor.</value>
+  </data>
+  <data name="SendAPrivateMessage" xml:space="preserve">
+    <value>Kişisel mesaj gönder</value>
+  </data>
+  <data name="Pages" xml:space="preserve">
+    <value>Sayfa:</value>
+  </data>
+  <data name="PleaseLoginRegisterToCreateTopic" xml:space="preserve">
+    <value>Yeni başlık açabilmek icin Giriş veya &lt;a href="register.aspx"&gt;Kayıt ol&lt;/a&gt;</value>
+  </data>
+  <data name="MoreSmilies" xml:space="preserve">
+    <value>Daha fazla surat</value>
+  </data>
+  <data name="Homepage" xml:space="preserve">
+    <value>Anasayfa:</value>
+  </data>
+  <data name="PollOption" xml:space="preserve">
+    <value>Anket seçeneği</value>
+  </data>
+  <data name="YouHave" xml:space="preserve">
+    <value>Size ait:</value>
+  </data>
+  <data name="StopWatchingForumPosts" xml:space="preserve">
+    <value>&lt;b&gt;yazılar&lt;/b&gt; için bu forumu izlerken durdurma</value>
+  </data>
+  <data name="UserNotFoundOrYouLoggedOut" xml:space="preserve">
+    <value>Kullanıcı çıkış yaptı veya bulunamadı</value>
+  </data>
+  <data name="ErrorBigAvatar" xml:space="preserve">
+    <value>Avatar dosya boyutu çok büyük</value>
+  </data>
+  <data name="WelcomeEmailBody" xml:space="preserve">
+    <value>KamuSınav.Net Forum ailesine hoşgeldiniz </value>
+  </data>
+  <data name="Attachments" xml:space="preserve">
+    <value>Eklentiler:</value>
+  </data>
+  <data name="UsersOnline" xml:space="preserve">
+    <value>Aktif Kullanıcılar</value>
+  </data>
+  <data name="SelectCategory" xml:space="preserve">
+    <value>Bu listeden bir kategori seçin:</value>
+  </data>
+  <data name="PollQuestion" xml:space="preserve">
+    <value>Anket Soru</value>
+  </data>
+  <data name="SendMessage" xml:space="preserve">
+    <value>Mesaj gönder</value>
+  </data>
+  <data name="Members" xml:space="preserve">
+    <value>Üye</value>
+  </data>
+  <data name="LatestPost" xml:space="preserve">
+    <value>En son iletiler</value>
+  </data>
+  <data name="ManuallyAddingUser" xml:space="preserve">
+    <value>El ile kullanıcı ekleme</value>
+  </data>
+  <data name="ForumCategory" xml:space="preserve">
+    <value>Forum kategori:</value>
+  </data>
+  <data name="MaxAttachSize" xml:space="preserve">
+    <value>Maksimum ek boyutu</value>
+  </data>
+  <data name="WatchForPosts" xml:space="preserve">
+    <value>&lt;b&gt;mesajlar&lt;/b&gt; için yeni forum seyretmek bu</value>
+  </data>
+  <data name="NewThreadEmailSubject" xml:space="preserve">
+    <value>Forum bildirimi. Bir forum yeni konu.</value>
+  </data>
+  <data name="WatchForTopics" xml:space="preserve">
+    <value>Bu forumdaki yeni başlıkları takip et</value>
+  </data>
+  <data name="OrEnterNew" xml:space="preserve">
+    <value>veya yeni bir değer girin:</value>
+  </data>
+  <data name="UnreadTopics" xml:space="preserve">
+    <value>okunmayan konular</value>
+  </data>
+  <data name="SignOut" xml:space="preserve">
+    <value>Çıkış</value>
+  </data>
+  <data name="RecentTopics" xml:space="preserve">
+    <value>Yeni başlıklar</value>
+  </data>
+  <data name="NotifyMeOnReply" xml:space="preserve">
+    <value>Cevap geldiğinde beni haberdar et</value>
+  </data>
+  <data name="NewPersonalSubject" xml:space="preserve">
+    <value>Forum bildirimi. Yeni kişisel mesaj.</value>
+  </data>
+  <data name="ActivationSuccess" xml:space="preserve">
+    <value>Etkinleştirme başarılı. Giriş için bekliyoruz</value>
+  </data>
+  <data name="ReplyWithQuote" xml:space="preserve">
+    <value>&amp;bull; Alıntı ile cevap ver</value>
+  </data>
+  <data name="OnlineUsers" xml:space="preserve">
+    <value>Aktif kullanıcı</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>Ön izleme</value>
+  </data>
+  <data name="DisabledUsers" xml:space="preserve">
+    <value>Engelli kullanıcıların</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>Konu:</value>
+  </data>
+  <data name="NewTopic" xml:space="preserve">
+    <value>Yeni başlık</value>
+  </data>
+  <data name="Views" xml:space="preserve">
+    <value>Görüntülenme</value>
+  </data>
+  <data name="SubForums" xml:space="preserve">
+    <value>Alt forumlar</value>
+  </data>
+  <data name="WelcomeEmailSubject" xml:space="preserve">
+    <value>Forumumuza Hoşgeldiniz. Hesabınız aktive edilmiştir, Forumumuzu ziyaret edebilirsiniz:</value>
+  </data>
+  <data name="AttachmFiles" xml:space="preserve">
+    <value>Dosya ekle</value>
+  </data>
+  <data name="Threads" xml:space="preserve">
+    <value>Başlıklar</value>
+  </data>
+  <data name="PreviousMessagesInTopic" xml:space="preserve">
+    <value>Bu başlık altındaki daha önceki mesajlar:</value>
+  </data>
+  <data name="AccessToForumDenied" xml:space="preserve">
+    <value>Bu forum sayfasına erişim engellenmiştir</value>
+  </data>
+  <data name="AddAnOption" xml:space="preserve">
+    <value>bir seçenek eklemek</value>
+  </data>
+  <data name="NewPersonalEmailBody" xml:space="preserve">
+    <value>yeni mesajınız var. Güncelleştirmeleri görüntülemek için ziyaret edin.</value>
+  </data>
+  <data name="Guest" xml:space="preserve">
+    <value>Ortalama</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>İptal</value>
+  </data>
+  <data name="RegisteredSince" xml:space="preserve">
+    <value>Kayıt olduğu tarih</value>
+  </data>
+  <data name="ActivationEmailSubject" xml:space="preserve">
+    <value>Üyelik etkinleştirin.</value>
+  </data>
+  <data name="UserAlreadyExists" xml:space="preserve">
+    <value>Kullanıcı zaten var!</value>
+  </data>
+  <data name="NewUser" xml:space="preserve">
+    <value>Yeni kullanıcı</value>
+  </data>
+  <data name="BackToWebSite" xml:space="preserve">
+    <value>◀ KAMUSINAV.NET</value>
+  </data>
+  <data name="Messages" xml:space="preserve">
+    <value>mesajlar</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Açıklama</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Ad</value>
+  </data>
+</root>

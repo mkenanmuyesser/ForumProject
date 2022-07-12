@@ -1,0 +1,993 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4C6835F3-7E60-4E96-BC01-32150E619BBE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>aspnetforum</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>aspnetforum</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <TargetFrameworkProfile />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Full|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Trial|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE; TRIAL</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'FullDebug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>false</Optimize>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <DebugSymbols>true</DebugSymbols>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.DirectoryServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="addpost.aspx" />
+    <Content Include="addprivatemsg.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="admin.aspx" />
+    <Content Include="adminsettings.aspx" />
+    <Content Include="App_LocalResources\readme.txt" />
+    <Content Include="aspnetforum.css" />
+    <Content Include="autologin.aspx" />
+    <Content Include="default.aspx" />
+    <Content Include="editforum.aspx" />
+    <Content Include="editprofile.aspx" />
+    <Content Include="editusergroup.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="facebooklogin.aspx" />
+    <Content Include="images\approve.png" />
+    <Content Include="images\AspNetForumAvatar1.gif" />
+    <Content Include="images\AspNetForumAvatar10.jpg" />
+    <Content Include="images\AspNetForumAvatar11.jpg" />
+    <Content Include="images\AspNetForumAvatar12.jpg" />
+    <Content Include="images\AspNetForumAvatar13.jpg" />
+    <Content Include="images\AspNetForumAvatar14.jpg" />
+    <Content Include="images\AspNetForumAvatar15.jpg" />
+    <Content Include="images\AspNetForumAvatar2.jpg" />
+    <Content Include="images\AspNetForumAvatar3.jpg" />
+    <Content Include="images\AspNetForumAvatar4.jpg" />
+    <Content Include="images\AspNetForumAvatar5.gif" />
+    <Content Include="images\AspNetForumAvatar6.jpg" />
+    <Content Include="images\AspNetForumAvatar7.jpg" />
+    <Content Include="images\AspNetForumAvatar8.jpg" />
+    <Content Include="images\AspNetForumAvatar9.jpg" />
+    <Content Include="images\delete-topic.png" />
+    <Content Include="images\down.png" />
+    <Content Include="images\facebook.png" />
+    <Content Include="images\forum.gif" />
+    <Content Include="images\forum.png" />
+    <Content Include="images\lock.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\openid-icon.png" />
+    <Content Include="images\rss.png" />
+    <Content Include="images\stick.png" />
+    <Content Include="images\topic.gif" />
+    <Content Include="images\topic_locked.png" />
+    <Content Include="images\topic_sticky.png" />
+    <Content Include="images\topic_unread.png" />
+    <Content Include="images\twitter.png" />
+    <Content Include="images\unreadmessages.png" />
+    <Content Include="images\unreadtopics.png" />
+    <Content Include="images\up.png" />
+    <Content Include="images\vote_bg.gif" />
+    <Content Include="jquery.autocomplete.css" />
+    <Content Include="jquery.autocomplete.js" />
+    <Content Include="jquery.jgrowl.css" />
+    <Content Include="jquery.jgrowl_minimized.js" />
+    <Content Include="jquery.placeholder.min.js" />
+    <Content Include="logout.aspx" />
+    <Content Include="lostpassword.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="messages.aspx" />
+    <Content Include="mysubscriptions.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="notactivated.aspx" />
+    <Content Include="premoderatedmessage.aspx" />
+    <Content Include="privateinbox.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="purgeoldtopics.aspx" />
+    <Content Include="recent.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="register.aspx" />
+    <Content Include="search.aspx" />
+    <Content Include="smilies.htm" />
+    <Content Include="topics.aspx" />
+    <Content Include="allusers.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="twitterlogin.aspx" />
+    <Content Include="viewpostsbyuser.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="viewprofile.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Compile Include="activate.aspx.cs">
+      <DependentUpon>activate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="activate.aspx.designer.cs">
+      <DependentUpon>activate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addpost.aspx.cs">
+      <DependentUpon>addpost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addpost.aspx.designer.cs">
+      <DependentUpon>addpost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addpostajax.ashx.cs">
+      <DependentUpon>addpostajax.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="addprivatemsg.aspx.cs">
+      <DependentUpon>addprivatemsg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addprivatemsg.aspx.designer.cs">
+      <DependentUpon>addprivatemsg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adduser.aspx.cs">
+      <DependentUpon>adduser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adduser.aspx.designer.cs">
+      <DependentUpon>adduser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin.aspx.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin.aspx.designer.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForumPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminonlineusers.aspx.cs">
+      <DependentUpon>adminonlineusers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminonlineusers.aspx.designer.cs">
+      <DependentUpon>adminonlineusers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminsettings.aspx.cs">
+      <DependentUpon>adminsettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminsettings.aspx.designer.cs">
+      <DependentUpon>adminsettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminusergroups.aspx.cs">
+      <DependentUpon>adminusergroups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminusergroups.aspx.designer.cs">
+      <DependentUpon>adminusergroups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ajaxuserautocomplete.ashx.cs">
+      <DependentUpon>ajaxuserautocomplete.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ajaxutils.ashx.cs">
+      <DependentUpon>ajaxutils.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetForumMaster.Master.cs">
+      <DependentUpon>AspNetForumMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspNetForumMaster.Master.designer.cs">
+      <DependentUpon>AspNetForumMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="autologin.aspx.cs">
+      <DependentUpon>autologin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="autologin.aspx.designer.cs">
+      <DependentUpon>autologin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="captchaimage.ashx.cs">
+      <DependentUpon>captchaimage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="complaints.aspx.cs">
+      <DependentUpon>complaints.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="complaints.aspx.designer.cs">
+      <DependentUpon>complaints.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dbupgrade.aspx.cs">
+      <DependentUpon>dbupgrade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dbupgrade.aspx.designer.cs">
+      <DependentUpon>dbupgrade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="emailallusers.aspx.cs">
+      <DependentUpon>emailallusers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="emailallusers.aspx.designer.cs">
+      <DependentUpon>emailallusers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="facebooklogin.aspx.cs">
+      <DependentUpon>facebooklogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="facebooklogin.aspx.designer.cs">
+      <DependentUpon>facebooklogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="getattachment.ashx.cs">
+      <DependentUpon>getattachment.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="getavatar.ashx.cs">
+      <DependentUpon>getavatar.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="getforumicon.ashx.cs">
+      <DependentUpon>getforumicon.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="imgthumbnail.ashx.cs">
+      <DependentUpon>imgthumbnail.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Jitbit.Utils\ADUtils.cs" />
+    <Compile Include="Jitbit.Utils\AsyncSendMail.cs" />
+    <Compile Include="Jitbit.Utils\CryptoUtils.cs" />
+    <Compile Include="Jitbit.Utils\ExceptionHandler.cs" />
+    <Compile Include="Jitbit.Utils\SessionExtender.cs" />
+    <Compile Include="Jitbit.Utils\StringUtils.cs" />
+    <Compile Include="messagesajax.ashx.cs">
+      <DependentUpon>messagesajax.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="notactivated.aspx.cs">
+      <DependentUpon>notactivated.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="notactivated.aspx.designer.cs">
+      <DependentUpon>notactivated.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OpenIdLogin.aspx.cs">
+      <DependentUpon>OpenIdLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OpenIdLogin.aspx.designer.cs">
+      <DependentUpon>OpenIdLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purgeoldtopics.aspx.cs">
+      <DependentUpon>purgeoldtopics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purgeoldtopics.aspx.designer.cs">
+      <DependentUpon>purgeoldtopics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="recentposts.ascx.cs">
+      <DependentUpon>recentposts.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="recentposts.ascx.designer.cs">
+      <DependentUpon>recentposts.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="renewsession.ashx.cs">
+      <DependentUpon>renewsession.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\various.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>various.resx</DependentUpon>
+    </Compile>
+    <Compile Include="THDataGrid.cs" />
+    <Compile Include="twitterlogin.aspx.cs">
+      <DependentUpon>twitterlogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="twitterlogin.aspx.designer.cs">
+      <DependentUpon>twitterlogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="unapprovedposts.aspx.cs">
+      <DependentUpon>unapprovedposts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="unapprovedposts.aspx.designer.cs">
+      <DependentUpon>unapprovedposts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="updatedtopics.aspx.cs">
+      <DependentUpon>updatedtopics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="updatedtopics.aspx.designer.cs">
+      <DependentUpon>updatedtopics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Achievements.cs" />
+    <Compile Include="Utils\Attachments.cs" />
+    <Compile Include="Utils\DB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\Formatting.cs" />
+    <Compile Include="faq.aspx.cs">
+      <DependentUpon>faq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="faq.aspx.designer.cs">
+      <DependentUpon>faq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forumgroups.aspx.cs">
+      <DependentUpon>forumgroups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forumgroups.aspx.designer.cs">
+      <DependentUpon>forumgroups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\CaptchaImage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="editforum.aspx.cs">
+      <DependentUpon>editforum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="editforum.aspx.designer.cs">
+      <DependentUpon>editforum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="editprofile.aspx.cs">
+      <DependentUpon>editprofile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="editprofile.aspx.designer.cs">
+      <DependentUpon>editprofile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="editsubforums.aspx.cs">
+      <DependentUpon>editsubforums.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="editsubforums.aspx.designer.cs">
+      <DependentUpon>editsubforums.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="editusergroup.aspx.cs">
+      <DependentUpon>editusergroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="editusergroup.aspx.designer.cs">
+      <DependentUpon>editusergroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForumPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lostpassword.aspx.cs">
+      <DependentUpon>lostpassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lostpassword.aspx.designer.cs">
+      <DependentUpon>lostpassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="messages.aspx.cs">
+      <DependentUpon>messages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="messages.aspx.designer.cs">
+      <DependentUpon>messages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mysubscriptions.aspx.cs">
+      <DependentUpon>mysubscriptions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mysubscriptions.aspx.designer.cs">
+      <DependentUpon>mysubscriptions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Forum.cs" />
+    <Compile Include="Utils\JSON.cs" />
+    <Compile Include="Utils\Message.cs" />
+    <Compile Include="Utils\ModeratorStats.cs" />
+    <Compile Include="Utils\oAuth.cs" />
+    <Compile Include="Utils\oAuthTwitter.cs" />
+    <Compile Include="Utils\openid\Association.cs" />
+    <Compile Include="Utils\openid\AssociationMemoryStore.cs" />
+    <Compile Include="Utils\openid\Associations.cs" />
+    <Compile Include="Utils\openid\Configuration\RelyingPartySection.cs" />
+    <Compile Include="Utils\openid\Configuration\RelyingPartySecuritySettingsElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\openid\Configuration\StoreElement.cs" />
+    <Compile Include="Utils\openid\Configuration\UntrustedWebRequestSection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\openid\Configuration\WhiteBlackListCollection.cs" />
+    <Compile Include="Utils\openid\Configuration\WhiteBlackListElement.cs" />
+    <Compile Include="Utils\openid\DiffieHellmanUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\openid\DiffieHellman\DHKeyGeneration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\openid\DiffieHellman\DHParameters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\openid\DiffieHellman\DiffieHellman.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\openid\DiffieHellman\DiffieHellmanManaged.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\openid\DiffieHellman\mono\BigInteger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\openid\DiffieHellman\mono\ConfidenceFactor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\openid\DiffieHellman\mono\NextPrimeFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\openid\DiffieHellman\mono\PrimalityTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\openid\DiffieHellman\mono\PrimeGeneratorBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\openid\DiffieHellman\mono\SequentialSearchPrimeGeneratorBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\openid\ExtensionArgumentsManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\openid\Extensions\AliasManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\openid\Extensions\IClientScriptExtensionResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\openid\Extensions\IExtension.cs" />
+    <Compile Include="Utils\openid\Extensions\SimpleRegistration\Constants.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\openid\GlobalSuppressions.cs" />
+    <Compile Include="Utils\openid\HmacShaAssociation.cs" />
+    <Compile Include="Utils\openid\HttpEncoding.cs" />
+    <Compile Include="Utils\openid\IAssociationStore.cs" />
+    <Compile Include="Utils\openid\Identifier.cs" />
+    <Compile Include="Utils\openid\IEncodable.cs" />
+    <Compile Include="Utils\openid\IResponse.cs" />
+    <Compile Include="Utils\openid\KeyValueFormEncoding.cs" />
+    <Compile Include="Utils\openid\MessageEncoder.cs" />
+    <Compile Include="Utils\openid\NoDiscoveryIdentifier.cs" />
+    <Compile Include="Utils\openid\Nonce.cs" />
+    <Compile Include="Utils\openid\OpenIdException.cs" />
+    <Compile Include="Utils\openid\Protocol.cs" />
+    <Compile Include="Utils\openid\ProtocolMessages.cs" />
+    <Compile Include="Utils\openid\Realm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\openid\RelyingParty\ApplicationMemoryStore.cs" />
+    <Compile Include="Utils\openid\RelyingParty\AssociateRequest.cs" />
+    <Compile Include="Utils\openid\RelyingParty\AssociateResponse.cs" />
+    <Compile Include="Utils\openid\RelyingParty\AssociationPreference.cs" />
+    <Compile Include="Utils\openid\RelyingParty\AuthenticationRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\openid\RelyingParty\AuthenticationResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\openid\RelyingParty\CheckAuthRequest.cs" />
+    <Compile Include="Utils\openid\RelyingParty\CheckAuthResponse.cs" />
+    <Compile Include="Utils\openid\RelyingParty\DirectMessageHttpChannel.cs" />
+    <Compile Include="Utils\openid\RelyingParty\DirectRequest.cs" />
+    <Compile Include="Utils\openid\RelyingParty\DirectResponse.cs" />
+    <Compile Include="Utils\openid\RelyingParty\FailedAuthenticationResponse.cs" />
+    <Compile Include="Utils\openid\RelyingParty\IAuthenticationRequest.cs" />
+    <Compile Include="Utils\openid\RelyingParty\IAuthenticationResponse.cs" />
+    <Compile Include="Utils\openid\RelyingParty\IDirectMessageChannel.cs" />
+    <Compile Include="Utils\openid\RelyingParty\IndirectMessageRequest.cs" />
+    <Compile Include="Utils\openid\RelyingParty\INonceStore.cs" />
+    <Compile Include="Utils\openid\RelyingParty\IProviderEndpoint.cs" />
+    <Compile Include="Utils\openid\RelyingParty\IRelyingPartyApplicationStore.cs" />
+    <Compile Include="Utils\openid\RelyingParty\ISetupRequiredAuthenticationResponse.cs" />
+    <Compile Include="Utils\openid\RelyingParty\IXrdsProviderEndpoint.cs" />
+    <Compile Include="Utils\openid\RelyingParty\OpenIdRelyingParty.cs" />
+    <Compile Include="Utils\openid\RelyingParty\RelyingPartySecuritySettings.cs" />
+    <Compile Include="Utils\openid\RelyingParty\ServiceEndpoint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\openid\RelyingParty\Token.cs" />
+    <Compile Include="Utils\openid\Response.cs" />
+    <Compile Include="Utils\openid\SecuritySettings.cs" />
+    <Compile Include="Utils\openid\Strings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\openid\UntrustedWebRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\openid\UntrustedWebResponse.cs" />
+    <Compile Include="Utils\openid\UriIdentifier.cs" />
+    <Compile Include="Utils\openid\Util.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\openid\XriIdentifier.cs" />
+    <Compile Include="Utils\openid\Yadis\ContentTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\openid\Yadis\HtmlParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\openid\Yadis\ServiceElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\openid\Yadis\TypeElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\openid\Yadis\UriElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\openid\Yadis\XrdElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\openid\Yadis\XrdsDocument.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\openid\Yadis\XrdsNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\openid\Yadis\Yadis.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\Password.cs" />
+    <Compile Include="premoderatedmessage.aspx.cs">
+      <DependentUpon>premoderatedmessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="premoderatedmessage.aspx.designer.cs">
+      <DependentUpon>premoderatedmessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="privateinbox.aspx.cs">
+      <DependentUpon>privateinbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="privateinbox.aspx.designer.cs">
+      <DependentUpon>privateinbox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="recent.aspx.cs">
+      <DependentUpon>recent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="recent.aspx.designer.cs">
+      <DependentUpon>recent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="recenttopics.aspx.cs">
+      <DependentUpon>recenttopics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="recenttopics.aspx.designer.cs">
+      <DependentUpon>recenttopics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="search.aspx.cs">
+      <DependentUpon>search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="search.aspx.designer.cs">
+      <DependentUpon>search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\SendNotifications.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ForumSEOHttpModule.cs" />
+    <Compile Include="topics.aspx.cs">
+      <DependentUpon>topics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="topics.aspx.designer.cs">
+      <DependentUpon>topics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="allusers.aspx.cs">
+      <DependentUpon>allusers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="allusers.aspx.designer.cs">
+      <DependentUpon>allusers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users.aspx.cs">
+      <DependentUpon>users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users.aspx.designer.cs">
+      <DependentUpon>users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Topic.cs" />
+    <Compile Include="Utils\UnreadTracker.cs" />
+    <Compile Include="Utils\User.cs" />
+    <Compile Include="Utils\Various.cs" />
+    <Compile Include="Utils\Settings.cs" />
+    <Compile Include="viewpostsbyuser.aspx.cs">
+      <DependentUpon>viewpostsbyuser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewpostsbyuser.aspx.designer.cs">
+      <DependentUpon>viewpostsbyuser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewprofile.aspx.cs">
+      <DependentUpon>viewprofile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewprofile.aspx.designer.cs">
+      <DependentUpon>viewprofile.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="!!license.txt" />
+    <Content Include="!!!README-asp-net-forum-software-guide.htm" />
+    <Content Include="activate.aspx" />
+    <Content Include="adduser.aspx" />
+    <Content Include="adminusergroups.aspx" />
+    <Content Include="AspNetForumMaster.Master" />
+    <Content Include="App_Data\FORUM.mdb">
+    </Content>
+    <Content Include="editsubforums.aspx" />
+    <Content Include="images\admin.gif" />
+    <Content Include="images\darkgradient.gif" />
+    <Content Include="images\editbar_bg.gif" />
+    <Content Include="images\lock.gif" />
+    <Content Include="images\logout.gif" />
+    <Content Include="recenttopics.aspx" />
+    <Content Include="users.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ajaxuserautocomplete.ashx" />
+    <None Include="App_Data\aspneforum_mysql.sql" />
+    <None Include="App_Data\aspneforum_MSsql.sql" />
+    <Content Include="getforumicon.ashx" />
+    <Content Include="getavatar.ashx" />
+    <None Include="Properties\PublishProfiles\lenovo.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\FORUM.mdf">
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="addpostajax.ashx" />
+    <Content Include="ajaxutils.ashx" />
+    <Content Include="messagesajax.ashx" />
+    <Content Include="captchaimage.ashx" />
+    <Content Include="renewsession.ashx" />
+    <Content Include="imgthumbnail.ashx" />
+    <Content Include="getattachment.ashx" />
+    <Content Include="faq.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\edit.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\img.gif" />
+    <Content Include="images\url.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\colors.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="forumgroups.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="complaints.aspx" />
+    <Content Include="emailallusers.aspx" />
+    <Content Include="images\envelope.gif" />
+    <Content Include="images\guestavatar.gif" />
+    <Content Include="jquery.MultiFile.js" />
+    <Content Include="unapprovedposts.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="editor.css" />
+    <Content Include="editor.js" />
+    <Content Include="images\darkgradient_rev.gif" />
+    <Content Include="images\icon_youtube.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="!!folders.gif" />
+    <Content Include="images\btngradient.gif" />
+    <Content Include="images\btngradient_rev.gif" />
+    <Content Include="images\delete.png" />
+    <Content Include="images\fileicon_excel.png" />
+    <Content Include="images\fileicon_na.png" />
+    <Content Include="images\fileicon_pdf.png" />
+    <Content Include="images\fileicon_word.png" />
+    <Content Include="images\icon_html.gif" />
+    <Content Include="images\icon_list.gif" />
+    <Content Include="images\icon_quote.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\tr-TR\adminusergroups.aspx.tr-TR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\tr-TR\editforum.aspx.tr-TR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\tr-TR\editprofile.aspx.tr-TR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\tr-TR\editsubforums.aspx.tr-TR.resx" />
+    <Content Include="App_LocalResources\tr-TR\editusergroup.aspx.tr-TR.resx" />
+    <Content Include="App_LocalResources\tr-TR\emailallusers.aspx.tr-TR.resx" />
+    <Content Include="App_LocalResources\tr-TR\lostpassword.aspx.tr-TR.resx" />
+    <Content Include="App_LocalResources\tr-TR\messages.aspx.tr-TR.resx" />
+    <Content Include="App_LocalResources\tr-TR\mysubscriptions.aspx.tr-TR.resx" />
+    <Content Include="App_LocalResources\tr-TR\register.aspx.tr-TR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\tr-TR\search.aspx.tr-TR.resx" />
+    <Content Include="App_LocalResources\tr-TR\users.aspx.tr-TR.resx" />
+    <Content Include="App_LocalResources\tr-TR\viewpostsbyuser.aspx.tr-TR.resx" />
+    <Content Include="App_LocalResources\tr-TR\viewprofile.aspx.tr-TR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="adminonlineusers.aspx" />
+    <Content Include="images\thumbsdown.png" />
+    <Content Include="images\thumbsup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\error.png" />
+    <Content Include="images\ok.png" />
+    <Content Include="images\openid\aolW.png" />
+    <Content Include="images\openid\blogger.png" />
+    <Content Include="images\openid\claimid.png" />
+    <Content Include="images\openid\facebookW.png" />
+    <Content Include="images\openid\fadegrey.png" />
+    <Content Include="images\openid\flickr.png" />
+    <Content Include="images\openid\flickrW.png" />
+    <Content Include="images\openid\googleW.png" />
+    <Content Include="images\openid\livejournal.png" />
+    <Content Include="images\openid\myopenid.png" />
+    <Content Include="images\openid\myopenidW.png" />
+    <Content Include="images\openid\myspaceW.png" />
+    <Content Include="images\openid\openid-icon.png" />
+    <Content Include="images\openid\openidico.png" />
+    <Content Include="images\openid\openidW.png" />
+    <Content Include="images\openid\technorati.png" />
+    <Content Include="images\openid\verisign.png" />
+    <Content Include="images\openid\vidoop.png" />
+    <Content Include="images\openid\wordpress.png" />
+    <Content Include="images\openid\yahooW.png" />
+    <Content Include="jquery.openid.js" />
+    <Content Include="openid.css" />
+    <Content Include="OpenIdLogin.aspx" />
+    <Content Include="recentposts.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dbupgrade.aspx" />
+    <Content Include="images\delete_bw.png" />
+    <Content Include="updatedtopics.aspx" />
+    <Content Include="App_LocalResources\tr-TR\adminsettings.aspx.tr-TR.resx" />
+    <Content Include="App_LocalResources\en-US\adminsettings.aspx.resx" />
+    <Content Include="App_LocalResources\en-US\adminusergroups.aspx.resx" />
+    <Content Include="App_LocalResources\en-US\editforum.aspx.resx" />
+    <Content Include="App_LocalResources\en-US\editprofile.aspx.resx" />
+    <Content Include="App_LocalResources\en-US\editsubforums.aspx.resx" />
+    <Content Include="App_LocalResources\en-US\editusergroup.aspx.resx" />
+    <Content Include="App_LocalResources\en-US\emailallusers.aspx.resx" />
+    <Content Include="App_LocalResources\en-US\lostpassword.aspx.resx" />
+    <Content Include="App_LocalResources\en-US\messages.aspx.resx" />
+    <Content Include="App_LocalResources\en-US\mysubscriptions.aspx.resx" />
+    <Content Include="App_LocalResources\en-US\register.aspx.resx" />
+    <Content Include="App_LocalResources\en-US\search.aspx.resx" />
+    <Content Include="App_LocalResources\en-US\users.aspx.resx" />
+    <Content Include="App_LocalResources\en-US\viewpostsbyuser.aspx.resx" />
+    <Content Include="App_LocalResources\en-US\viewprofile.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <EmbeddedResource Include="Resources\various.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>various.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\various.tr-TR.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\openid\Strings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\forumavatars\" />
+    <Folder Include="App_Data\forumicons\" />
+    <Folder Include="App_Data\forumuploadfiles\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Target Name="AfterBuild">
+    <GetAssemblyIdentity AssemblyFiles="$(TargetPath)">
+      <Output TaskParameter="Assemblies" ItemName="AssemblyIdentities" />
+    </GetAssemblyIdentity>
+    <Exec Command="hg tag %(AssemblyIdentities.Version)" IgnoreExitCode="true">
+    </Exec>
+  </Target>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>1501</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1501/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

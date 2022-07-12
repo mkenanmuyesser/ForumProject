@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<configuration>
+
+
+	<!-- forum database connection string -->
+	<!-- !!uncomment the appropriate line!! and please don't change the "name" attribute -->
+	<connectionStrings>
+		
+		<!--SQL EXPRESS connection string (FILE-METHOD aka "user-instance")-->
+		<add name="AspNetForumConnectionString" connectionString="Data Source=(local);AttachDbFileName=|DataDirectory|FORUM.mdf;Integrated Security=True;User Instance=True" providerName="System.Data.SqlClient"/>
+
+		<!--MS ACCESS connection string-->
+		<!--<add name="AspNetForumConnectionString" connectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|forum.mdb;Jet OLEDB:Database Password=DB_PASSWORD;" providerName="System.Data.OleDb"/>-->
+
+		<!--SQL SERVER connection string-->
+		<!--<add name="AspNetForumConnectionString" connectionString="Data Source=(local);Initial Catalog=forum;User ID=forum_user;Password=forum;" providerName="System.Data.SqlClient"/>-->
+
+		<!--MYSQL connection string-->
+		<!--<add name="AspNetForumConnectionString" connectionString="Data Source=localhost;Database=forum;User ID=ForumUser;Password=psw;" providerName="MySql.Data.MySqlClient"/>-->
+
+		<!--MYSQL ODBC connection string-->
+		<!--<add name="AspNetForumConnectionString" connectionString="DRIVER={MySQL ODBC 3.51 Driver};SERVER=localhost;DATABASE=forum;PORT=3306;USER=ForumUser;PASSWORD=psw;OPTION=3;" providerName="System.Data.Odbc" />-->
+	</connectionStrings>
+
+
+	<system.web>
+
+		<!--Set the forum language here. Available options are listed below (UNCOMMENT the appropriate string):-->
+		<globalization uiCulture="en-US"/><!--(English US/UK)-->
+		<!--<globalization uiCulture="es-ES"/>--><!--(Spanish)-->
+		<!--<globalization uiCulture="nl-NL"/>--><!--(Dutch)-->
+		<!--<globalization uiCulture="sv-SE"/>--><!--(Swedish)-->
+		<!--<globalization uiCulture="de-DE"/>--><!--(German)-->
+		<!--<globalization uiCulture="tr-TR"/>--><!--(Turkish)-->
+		<!--<globalization uiCulture="he-IL"/>--><!--(Hebrew)-->
+		<!--<globalization uiCulture="da-DK"/>--><!--(Danish) -->
+		<!--<globalization uiCulture="fr-FR"/>--><!--(French)-->
+		<!--<globalization uiCulture="it-IT"/>--><!--(Italian)-->
+		<!--<globalization uiCulture="pt-PT"/>--><!--(Portuguese)-->
+		<!--<globalization uiCulture="nb-NO"/>--><!--(Norwegian)-->
+		<!--<globalization uiCulture="zh-CN"/>--><!--(Chinese Traditional)-->
+		<!--<globalization uiCulture="pl-PL"/>--><!--(Polish)-->
+		<!--<globalization uiCulture="ar-SA"/>--><!--(Arabic)-->
+		<!--<globalization uiCulture="hi-IN"/>--><!--(Hindi)-->
+		<!--<globalization uiCulture="ru-RU"/>--><!--(Russian)-->
+		<!--<globalization uiCulture="cs-CZ"/>--><!--(Czech)-->
+
+
+
+
+		<!-- Uncomment the "httpModules" section below to enable SEO-friendly URLs for IIS6 or VS built-in web-development server.
+			If you're using IIS7 - DO NOT use this section, see below instead
+			PLEASE NOTE: if you are installing the forum under an existing application,
+			then copy-paste this "httpModules" section to your parent application's web.config!!!
+			(into the "system.web" section) -->
+		<!--<httpModules>
+			<add type="aspnetforum.ForumSEOHttpModule, aspnetforum" name="ForumSEOHttpModule"/>
+		</httpModules>-->
+		
+		
+		
+		
+		<!--if you want the forum to use windows-authentication do the following:
+		1) open the forum app in browser, go to the "administrator-configuration" page and set the "integrated authentication" flag
+		2) set the "AdminUserName" to your username (including the domain - "DOMAIN\username")
+		3) uncomment the authentication tag below
+		-->
+		<!--<authentication mode="Windows"/>-->
+		
+		
+		
+		<!-- reserved dont touch-->
+		<compilation debug="false" targetFramework="4.0"/>
+		<sessionState timeout="30" mode="InProc" cookieless="false"/>
+		<pages enableSessionState="true" controlRenderingCompatibilityVersion="3.5" clientIDMode="AutoID"/>
+	</system.web>
+	
+	
+	<!-- SEO-friendly URLS for IIS 7.0 (if you're using IIS 6.0 see above) -->
+	<system.webServer>
+		<modules>
+			<add type="aspnetforum.ForumSEOHttpModule, aspnetforum" name="ForumSEOHttpModule"/>
+		</modules>
+	</system.webServer>
+	
+	
+	<appSettings>
+		<!-- ADVANCED USERS ONLY -->
+		<!-- set this flag to "true" if your configuration changes (in the "admin-configuration" form) has made the forum non-operational,
+		this will reset all settings to default. Set the flag to true, re-open the forum in browser, then set it back to false-->
+		<add key="ResetSettingsToDefault" value="false"/>
+	</appSettings>
+	
+	
+</configuration>
