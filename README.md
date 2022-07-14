@@ -7,3 +7,7 @@ Please check .extra_files folder or github wiki part for detailed project inform
 Asp.net Webform Forum (mobile friendly)
 
 Jitbit .net forum infrastructure was used, but some parts were customized.
+
+Minran Kenan MÜYESSER
+mkenanmuyesser@hotmail.com
+https://www.linkedin.com/in/minran-kenan-müyesser
